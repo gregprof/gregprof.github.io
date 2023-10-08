@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <main>
+            <div id="pov1" class="pov">
+                <img class="chrono" src="img/chrono.png">
+                <img class="hand" src=img/hand.png>   
+                <img class="ant" src="img/ant.png" >             
+                <canvas width="400" height="400"></canvas>
+            </div>
+
+            <div id="pov2" class="pov">
+                <img class="chrono" src="img/chrono.png">
+                <img class="hand" src=img/hand.png>   
+                <img class="ant" src="img/ant.png" >             
+                <canvas width="400" height="400"></canvas>
+            </div>            
+
+            <input id="slider" class="slider" type="range" min="0" max="360" step="1" >
+
+            <div>
+                <input id="trajectories" class="check" type="checkbox">
+                <label>Trajectoires</label>
+            </div> 
+            <div>
+                <input id="ref" class="check" type="checkbox">
+                <label>Référentiels</label>
+            </div>           
+
+        </main>
+
+        <script src="script.js" type="text/javascript"></script>
+    </body>
+
+</html>

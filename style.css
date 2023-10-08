@@ -1,0 +1,70 @@
+.pov {
+    width: 400px;
+    height: 400px;
+    margin: 8px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+.chrono {
+    height: 380px;
+    position: absolute;
+    top : 10px;
+    left : 40px;    
+}
+
+.pov canvas {
+    position: absolute;
+    top : 0px;
+    left : 0px;    
+}
+
+.slider {
+
+    position: absolute;
+    top: 430px;
+    left: 20px;   
+}
+
+.check {
+
+    position: relative; 
+    top: 30px;
+    left: 20px;
+}
+
+.check + label {
+    position: relative;
+    top: 30px;
+    left: 20px;
+}
+
+.wave {
+    width: 400px;
+    height: 200px;
+    background-image: url("img/sea.png");
+    background-repeat: repeat-x;
+    background-position: bottom 0px right 0px;
+    position: absolute;
+    top : 0px;
+    left : 0px;
+}
+
+.hand {
+    height: 125px;    
+    position: absolute;
+    top : 124px;
+    left : 178px;
+    transform: rotate(0deg);     
+}
+
+.ant {
+    height: 15px; 
+    position: absolute;
+    top : 220px;
+    left : 180px;
+    transform: rotate(-90deg);    
+
+}
