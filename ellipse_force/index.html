@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <main>
+            <div id="graph" class="graph">
+            </div>
+
+            <form class="slider" oninput="power.value=n_power.value">
+                <input id="n_power" type="range" min="-4" max="4" step="0.01" value="0">
+                <b> n = </b>
+                <output id="power">0</output>
+            </form>
+
+            <form class="slider" oninput="turns.value=nb_turn.value">
+                <input id="nb_turn" type="range" min="1" max="10" step="1" value="1">
+                <b> turns number = </b>
+                <output id="turns">1</output>
+            </form>
+
+            <form class="slider">
+                <input id="G_coeff" type="range" min="0.1" max="2" step="0.005" value="1">
+                <b> G = </b>
+                <output id=G_print data-significant-figures="2"></output>
+            </form>
+            <label>
+                <input id="real_trajectory_checkbox" type="checkbox"> Plot real trajectory
+            </label>            
+                           
+        </main>
+        <script src="plotly.js" ></script>
+        <script src="script.js" type="text/javascript"></script>
+
+    </body>
+
+</html>
