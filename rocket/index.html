@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <main>
+            <div id="pov1" class="pov">
+                <canvas width="300" height="600"> </canvas>                            
+                <img id = "rocket" class="rocket" src="img/rocket.png">                    
+                <img id = "fire" class="fire" src="img/fire.png">  
+                <div id="fuel"> OUT OF FUEL</div>                
+                </div>
+
+            <div display: inline-block;>
+                <button onclick="requestAnimationFrame(timer)" id="lacher" class="button"> Moteur</button>
+            
+                <img src="img/pause.png" class="time_button" id="play"> 
+                <img src="img/stop.png"  class="time_button" id="stop">               
+            </div>        
+
+            <div>
+                <input id="frot" type="checkbox" unchecked>
+                <label>Frottements</label>
+            </div>            
+
+            <div class="hist">
+                <div class="graph" id="histogramL">
+                </div>
+                <div class="graph" id="histogramR">
+                </div>
+            </div>
+
+            <div class = "plot" id='plot'>
+            </div>
+
+            <div class = "plot_select">
+                <div class="column">
+                    Histogramme 1
+                    <div>
+                        <input id="EcL" type="checkbox" unchecked>
+                        <label>Energie cinétique</label>
+                    </div> 
+                    <div>
+                        <input id="EpL" type="checkbox" unchecked>
+                        <label>Energie potentielle</label>
+                    </div>
+                    <div>
+                        <input id="WmL" type="checkbox" unchecked>
+                        <label>Travail poussée</label>
+                    </div>
+                    <div>
+                        <input id="WfL" type="checkbox" unchecked>
+                        <label>Travail frottements</label>
+                    </div>           
+                    <div>
+                        <input id="EmL" type="checkbox" unchecked>
+                        <label>Energie mécanique</label>
+                    </div>
+                    <div>
+                        <input id="TankL" type="checkbox" unchecked>
+                        <label>Energie chimique ergols</label>
+                    </div>
+                    <div>
+                        <input id="QL" type="checkbox" unchecked>
+                        <label>Chaleur dissipée dans l'air</label>
+                    </div>
+                    <div>
+                        <input id="actionL" type="checkbox" unchecked>
+                        <label>Action</label>
+                    </div>                                    
+                </div>    
+                <div class="column">
+                    Histogramme 2
+                    <div>
+                        <input id="EcR" type="checkbox" unchecked>
+                        <label>Energie cinétique</label>
+                    </div> 
+                    <div>
+                        <input id="EpR" type="checkbox" unchecked>
+                        <label>Energie potentielle</label>
+                    </div>
+                    <div>
+                        <input id="WmR" type="checkbox" unchecked>
+                        <label>Travail poussée</label>
+                    </div>
+                    <div>
+                        <input id="WfR" type="checkbox" unchecked>
+                        <label>Travail frottements</label>
+                    </div>           
+                    <div>
+                        <input id="EmR" type="checkbox" unchecked>
+                        <label>Energie mécanique</label>
+                    </div>
+                    <div>
+                        <input id="TankR" type="checkbox" unchecked>
+                        <label>Energie chimique ergols</label>
+                    </div>
+                    <div>
+                        <input id="QR" type="checkbox" unchecked>
+                        <label>Chaleur dissipée dans l'air</label>
+                    </div>  
+                    <div>
+                        <input id="actionR" type="checkbox" unchecked>
+                        <label>Action</label>
+                    </div>                                     
+                 </div>  
+            </div>                                                         
+
+        </main>
+
+        <script src="plotly.js"></script>
+        <script src="script.js" type="text/javascript"></script>        
+    </body>
+
+</html>

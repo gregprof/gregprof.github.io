@@ -1,0 +1,111 @@
+.pov {
+    width: 300px;
+    height: 600px;
+    top : 0px;
+    left : 0px;
+    margin: 8px;
+    border: 1px solid #cccccc;
+    background-color: rgb(198, 255, 255);
+    position: relative;
+}
+
+.pov canvas { 
+    border : 1px solid red;
+    position: absolute;
+    top : 0px;
+    left : 0px;
+}
+
+.rocket {
+    height: 100px;
+    position: absolute;
+    top : 500px;
+    left : 115px;    
+}
+
+.fire {
+    height: 75px;
+    position: absolute;
+    top :585px;
+    left : 131px; 
+    visibility: hidden;       
+}
+
+.hist {
+    border: 0px solid #cccccc;
+    position: absolute;
+    left: 330px; /* Ajustez cette valeur selon votre besoin */
+    top: 0px; /* Ajustez cette valeur selon votre besoin */
+}
+
+.graph {
+    border: 0px solid hsl(253, 82%, 43%);
+    background-color: transparent;
+    display: inline-block;
+    width: 200px; /* Ajustez la largeur selon votre besoin */
+    height: 800px; /* Ajustez la hauteur selon votre besoin */
+    margin-right: -165px;
+    margin-left: 0px;    
+}
+
+.plot {
+    border: 0px solid #cccccc;
+    position: absolute;
+    display: inline-block;
+    left: 500px; /* Ajustez cette valeur selon votre besoin */
+    top: 0px; /* Ajustez cette valeur selon votre besoin */
+    width: 600px; /* Ajustez la largeur selon votre besoin */
+    height: 800px; /* Ajustez la hauteur selon votre besoin */
+}
+
+.button {
+    /* Styles par défaut */
+    background-color: gray;    
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.column {
+    margin: 0 10px;
+    display: block;
+}
+
+
+.button.disabled {
+    /* Styles lorsque le bouton est désactivé */
+    background-color: #4CAF50; /* Vert */    
+}
+
+.plot_select {
+    position: absolute;
+    top: 100px;
+    left: 1200px;
+    display: flex;
+    align-content: normal;
+    gap: 20px; /* Espace entre les colonnes */
+}
+
+#play {
+    position: relative;
+    top: 23px;
+    left: 10px;
+    height: 55px;
+}
+
+.time_button {
+    position: relative;
+    top: 23px;
+    left: 10px;
+    height: 55px;
+}
+
+#fuel {
+   color: red;
+   visibility : hidden 
+}
