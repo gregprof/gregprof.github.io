@@ -1,0 +1,59 @@
+
+.field {
+    border : 3px solid black;
+}
+
+.slider {
+    position: relative;
+    top : 40px;
+}
+
+#properties {
+    position: relative;
+    top : 20px;
+}
+
+#fluid{
+    height: 200px;
+    width: 320px;
+}
+
+#parameters {
+    position: absolute;
+    top: 8px;
+    left: 364px;
+    height: 200px;
+    width: 250px;
+}
+
+#pan {
+    height: 150px;
+    width: 606px; 
+}
+
+#canvas {
+    position: absolute;
+    left : 180px;
+}
+
+#measures {
+    position: absolute;
+    height: 230px;
+    width : 200px;
+}
+
+#reminders {
+    position: absolute ;
+    left : 244px;
+    width : 370px;
+}
+
+#dim {
+    position: relative;
+    top : 10px;
+}
+
+#adim {
+    position: relative;
+    top : 20px;
+}

@@ -1,0 +1,159 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+    <body>
+
+        <main>
+            <fieldset class="field" id="fluid">
+                <legend><b>Choisir un fluide:</b></legend>
+            
+                <div>
+                  <input type="radio" id="water" name="liquid" value="water"
+                         checked>
+                  <label for="water">Eau</label>
+                </div>
+            
+                <div>
+                    <input type="radio" id="oil" name="liquid" value="oil">
+                    <label for="oil">Huile</label>
+                </div>
+                
+                <div>
+                    <input type="radio" id="mercury" name="liquid" value="mercury">
+                    <label for="mercury">Mercure</label>
+                </div>              
+
+                <div id="properties">
+                <div>
+                    <b>\(\rho=\)</b>
+                    <output id="rho" type="number"></output>
+                    <em>\(kg.m^{-3}\)</em>
+                </div>
+ 
+                <div>
+                    <b>\(c_p=\) </b>
+                    <output class="value" id="cp" type="number"></output>
+                    <em>\(J.K^{-1}.kg^{-1}\)</em>
+                </div>
+
+                <div>
+                    <b>\(\lambda = \)</b>
+                    <output id="lambda" type="number"></output>
+                    <em>\(W.m^{-1}\)</em> 
+                </div>  
+                            
+                <div>
+                    <b>\(\alpha=\) = </b>
+                    <output id="alpha" type="number"></output>
+                    <em>\(K^{1}\)</em> 
+                </div>      
+                
+                <div>
+                    <b>\(\nu\) = </b>
+                    <output id="nu" type="number"></output>
+                    <em>\(m^2.s^{-1}\)</em>  
+                </div>
+                </div>
+                 
+
+            </fieldset>
+
+            <fieldset class="field" id="parameters">
+                <legend><b>Paramètres :</b></legend>
+                <form class="slider" oninput="result.value=power.value">
+                    <input id="power" type="range" min="0" max="8000" step="1">
+                    <b>P = </b>
+                    <output name="result">0</output> 
+                    <em>W</em>
+                </form>   
+    
+                <form class="slider" oninput="result.value=height.value">
+                    <input id="height" type="range" min="0" max="20" step="1">
+                    <b>H = </b>
+                    <output name="result">10</output> 
+                    <em>cm</em>
+                </form>     
+                
+                <form class="slider" oninput="result.value=diam.value">
+                    <input id="diam" type="range" min="5" max="60" step="1">
+                    <b>D = </b>
+                    <output name="result">30</output> 
+                    <em>cm</em>
+                </form> 
+            </fieldset>
+
+            <fieldset class="field" id="pan">
+                <legend><b>Protocole expérimental :</b></legend>
+                <canvas id="canvas" width="380" height="150"></canvas>           
+            </fieldset>
+
+            <fieldset class="field" id="measures">
+                <legend><b>Mesures et calculs</b></legend>
+                
+                <div id="dim">
+                    <div>
+                        <b> \(T_p\) = </b>
+                        <output id="Tp" type="number"></output>
+                        <em>°C</em>
+                    </div>
+
+                    <div>
+                        <b> \(T_\infty\) = </b>
+                        <output id="Tinf" type="number"></output>
+                        <em>°C</em>
+                    </div>                    
+        
+                    <div><b>\(h=\) </b>
+                        <output id="h_conv" type="number"></output>
+                        <em>\(W.K^{-1}.m^{-2}\)</em>
+                    </div>
+                </div>
+
+                
+                <div id="adim">
+                    <div><b>Nusselt = </b>
+                        <output id="Nusselt" type="number"></output>
+                    </div>
+                
+                    <div><b>Prandtl = </b>
+                        <output id="Pr" type="number"></output>            
+                    </div>
+    
+                    <div>
+                        <b>Rayleigh = </b>
+                        <output id="Ra" type="number"></output>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <fieldset class="field" id="reminders">
+                <legend><b>Rappels:</b></legend>
+
+                $$Pr = \dfrac{\nu}{a}$$
+                $$Ra = \dfrac{\alpha g L^3 (T_p-T_{inf})}{a\nu}$$                
+                $$P = hS(T_p - T_\inf)$$   
+
+                On cherche une corrélation de la forme : $$ Nu = K \times Pr^a \times Ra^b $$
+
+
+            </fieldset>            
+
+
+        </main>
+
+        <script src="script.js" type="text/javascript"></script>
+
+    </body>
+
+</html>
