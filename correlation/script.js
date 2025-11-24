@@ -107,13 +107,13 @@ function update(P,H,D) {
 }
 
 function loop() {
-  S=Math.PI*0.3**2;  
+  S=Math.PI*(0.5*D)**2;  
   Tp = Tinf + P/(200*S);
   for (let it=0; it<10; it++) {
     Pr = nu/a;
-    Ra = alpha*g*((0.01*D)**3)*(Tp-Tinf)/(a*nu);
+    Ra = alpha*g*((0.01*0.25*D)**3)*(Tp-Tinf)/(a*nu);
     Nuss = 0.15*Ra**(1/3);
-    h_conv= lambda*Nuss/(0.01*D);
+    h_conv= lambda*Nuss/(0.01*0.25*D);
     Tp = Tinf + P/(h_conv*S);       
   }  
 }
